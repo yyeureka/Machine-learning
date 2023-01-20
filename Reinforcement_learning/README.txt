@@ -7,9 +7,3 @@ openai: convertor to generate transition and reward matrix from OpenAI Gym examp
 _small, _middle, _large: three different sizes of that MDP.
 _complexity: explores how number of states affects results.
 _gamma: explores how discount factor affects results.
-
-
-You can clone the code in this repository with the command:
-git clone https://github.com/yukokokoo/Markov-decision-processes.git
-Or open with:
-https://github.com/yukokokoo/Markov-decision-processes
