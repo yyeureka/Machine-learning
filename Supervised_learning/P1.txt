@@ -1,0 +1,55 @@
+feature selection? Regularization?
+一个model，就算用grid search也不太知道调哪些参数，怎么设置参数范围，
+调到什么程度差不多就最优了
+
+choose datasets, explain why they are interesting
+"implement" learning algorithms
+compare their performance
+tuning the algorithms
+analysis your findings
+do some fiddling to get good results, graphs and such
+
+You must submit:
+1. a file named README.txt containing instructions for running your code 
+   probably want to arrange for an URL of some sort
+2. a file named yourgtaccount-analysis.pdf containing your writeup (12p)
+
+5. k-nearest neighbors
+   Use different values of k, plot decision boundary
+                              compute and plot tesing and training accuracy-model complexity curve, 左overfitting右underfitting
+   less k: more complex model, can lead to overfitting, 
+           run the risk being sensative to noise in data
+   larger k: smoother decision boundary(less curvy), less complex model
+   too large k: preform less well, underfitting
+6. Testing
+   design two interesting classification problems:
+   a set of training examples and a set of test examples
+7. Cross validation
+   more folds = more computational expensive
+8. Regularized regression
+   a. Ridge regression
+      choose alpha:
+      alpha = 0: can lead to overfitting
+      very high alpha: can lead to underfitting
+   b. Lasso regression
+      can be used to feature selection, tell the importance of each feature based on their coefficients
+
+Python: tensorflow/pytorch
+
+positive class: real email, has quite larger possiblity than spam email
+
+Steps:
+1. Preprocessing data
+2. Creating training and test sets
+3. Fitting a classifier or regressor
+   比较scaling前后的accuracy
+4. Tuning its parameters
+5. Evaluating its performance on new data
+   score, mse/rmse, accuracy_score, CV score, confusion matrix, ROC&AUC
+   plot y_test vs y_pred_test， y_train vs y_pred_train
+   plot decision boundary，看是linear还是non-linear的
+   比较training set、test set和CV的score, detect overfitting/underfitting
+   plot the importance of coefs
+   如果overfittng了，删除不重要的feature？
+   对比不同的algorithm
+   
